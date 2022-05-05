@@ -18,14 +18,7 @@ class Board {
     show() {
         return this.renderedBoard.map(row => row.map(cell => cell.getStatus()).join(' ')).join('\n');
     }
-
-    verifyStatus(cell) {
-        if (cell == undefined) {
-            return 0;
-        }
-        return cell.getStatus();
-    }
-      
+    
     findNeighbors(row, column) {
         let aliveNeighbors = 0;
         
